@@ -1,4 +1,5 @@
 package com.stackroute.stackroute.controller;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.stackroute.controller.TrackController;
 import com.stackroute.domain.Track;
@@ -23,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 
 
 @RunWith(SpringRunner.class)

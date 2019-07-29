@@ -2,23 +2,23 @@ package com.stackroute.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-@Entity
-@Data
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
-@JsonIgnoreProperties(ignoreUnknown = true)
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+
+@Data //Using lombok to handle the getter setters
+@NoArgsConstructor //Creates a zero argument constructor
+@AllArgsConstructor //Creates an all argument constructor
+@Builder
+@Document(collection = "track")
 public class Track {
 
+
+    //@GeneratedValue(strategy= GenerationType.AUTO)
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     int id;
     String name;
     String comment;
